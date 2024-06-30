@@ -1,0 +1,21 @@
+spring:
+  datasource:
+  url: jdbc:h2:mem:honbob
+  username: sa
+  password:
+  driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true  # H2 Console? ???? ?? (H2 Console? H2 Database? UI? ????? ??)
+      path: /h2-console  # H2 Console? Path
+jpa:
+  hibernate:
+    ddl-auto: create
+  properties:
+    hibernate:
+      show_sql: true
+      format_sql: true
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.orm.jdbc.bind: trace #??? ?? 3.x, hibernate6
+# org.hibernate.type: trace #??? ?? 2.x, hibernate5
